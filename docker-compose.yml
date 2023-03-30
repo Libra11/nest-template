@@ -8,6 +8,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: lixin521
+    ports:
+      - 27018:27017
 
   mongo-express:
     image: mongo-express
@@ -18,3 +20,10 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: lixin521
       ME_CONFIG_MONGODB_URL: mongodb://root:lixin521@mongo:27017/
+  nestjs_app:
+    build: .
+    restart: always
+    ports:
+      - 3000:3001
+    depends_on:
+      - mongo
