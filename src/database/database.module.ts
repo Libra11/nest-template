@@ -1,6 +1,13 @@
 /*
  * @Author: Libra
  * @Date: 2023-03-30 10:31:14
+ * @LastEditTime: 2023-04-03 13:51:23
+ * @LastEditors: Libra
+ * @Description:
+ */
+/*
+ * @Author: Libra
+ * @Date: 2023-03-30 10:31:14
  * @LastEditors: Libra
  * @Description:
  * @FilePath: /back-end-temp/src/database/database.module.ts
@@ -25,4 +32,3 @@ import { MongooseModule } from '@nestjs/mongoose';
   ],
 })
 export class DatabaseModule {}
-console.log(process.env);
